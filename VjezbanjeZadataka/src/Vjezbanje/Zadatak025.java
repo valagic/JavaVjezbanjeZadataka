@@ -17,7 +17,7 @@ public class Zadatak025 {
 				System.out.print(j);
 				
 				System.out.println("");
-					
+				
 		}
 		
 		
