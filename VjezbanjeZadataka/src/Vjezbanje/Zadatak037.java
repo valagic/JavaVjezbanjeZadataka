@@ -12,7 +12,7 @@ public class Zadatak037 {
 
 		for(int i=0;i<niz.length-1;i++) {
 			for(int j=i+1;j<niz.length;j++) {
-				if(niz[i] == niz[j] && (i !=j)) { // moze ici i ovako if( (my_array[i].equals(my_array[j])) && (i != j) )
+				if(niz[i]== niz[j] && (i !=j)) { // moze ici i ovako if( (my_array[i].equals(my_array[j])) && (i != j) )
 					System.out.println("dupli elementi su : " + niz[j]);
 				}
 			}
