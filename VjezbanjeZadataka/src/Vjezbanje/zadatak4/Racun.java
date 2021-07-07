@@ -1,6 +1,5 @@
 package Vjezbanje.zadatak4;
 
-import java.sql.Date;
 
 public class Racun extends Dokument{
 
@@ -10,7 +9,7 @@ public class Racun extends Dokument{
 		
 	}
 	
-	public Racun(int iD, float iznos, Date datum, Kupac kupac) {
+	public Racun(int iD, double iznos, String datum, Kupac kupac) {
 		super(iD, iznos, datum);
 		this.kupac = kupac;
 	}
@@ -25,7 +24,7 @@ public class Racun extends Dokument{
 	
 	@Override
 	public String toString() {
-		return super.toString() + " " + this.kupac + this.getID()+this.getIznos()+this.getDatum();
+		return Integer.toString(getID()) + " " + getIznos()+ " " +  getDatum() + " " + getKupac();
 	}
 	
 }

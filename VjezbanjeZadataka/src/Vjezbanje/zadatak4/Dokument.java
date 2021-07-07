@@ -1,18 +1,18 @@
 package Vjezbanje.zadatak4;
 
-import java.sql.Date;
+
 
 public class Dokument {
 
 	private int ID;
-	private float iznos;
-	private Date datum;
+	private double iznos;
+	private String datum;
 	
 	public Dokument() {
 		
 	}
 	
-	public Dokument(int iD, float iznos, Date datum) {
+	public Dokument(int iD, double iznos, String datum) {
 		ID = iD;
 		this.iznos = iznos;
 		this.datum = datum;
@@ -24,20 +24,17 @@ public class Dokument {
 	public void setID(int iD) {
 		ID = iD;
 	}
-	public float getIznos() {
+	public double getIznos() {
 		return iznos;
 	}
-	public void setIznos(float iznos) {
+	public void setIznos(double iznos) {
 		this.iznos = iznos;
 	}
-	public Date getDatum() {
+	public String getDatum() {
 		return datum;
 	}
-	public void setDatum(Date datum) {
+	public void setDatum(String datum) {
 		this.datum = datum;
 	}
-	@Override
-	public String toString() {
-		return this.ID + " " +  this.iznos +  " " + this.datum;
-	} 
+
 }

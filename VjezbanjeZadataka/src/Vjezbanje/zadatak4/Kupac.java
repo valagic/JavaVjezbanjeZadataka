@@ -36,7 +36,7 @@ public class Kupac {
 	
 	@Override
 	public String toString() {
-		return super.toString() + " " + this.ID + this.adresa + this.naziv ;
+		return this.getID() + " " + this.getNaziv() + " " + this.getAdresa();
 	}
 	
 }

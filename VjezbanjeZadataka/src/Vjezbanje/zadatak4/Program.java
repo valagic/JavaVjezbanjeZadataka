@@ -16,16 +16,15 @@ public class Program {
 		racun.setIznos(5555);
 		System.out.println(racun.getIznos());*/
 		
-		Kupac kupac = new Kupac();
-		
-		Racun r1 = new Racun(1, 2, null, kupac);
+		Racun r1 = new Racun(1, 4.0, "2021-02-02", new Kupac(1, "Kaufland", "Osijek"));
 		System.out.println(r1);
 				
-
+		Primka p1 = new Primka(1, 4.0, "2021-03-03", "Osijek");
+		System.out.println(p1);
 		
-		Primka primka = new Primka();
+		/*Primka primka = new Primka();
 		primka.setIznos(3333);
-		System.out.println(primka.getIznos());
+		System.out.println(primka.getIznos());*/
 	}
 	
 	
