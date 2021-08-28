@@ -1,51 +1,53 @@
 package Vjezbanje;
 
+import java.util.Arrays;
+
 import javax.swing.JOptionPane;
 
 public class CiklicnaMatrica {
 
 	public static void main(String[] args) {
-		
-		int brojRedova, brojStupaca;
-		
-		brojRedova = Integer.parseInt(JOptionPane.showInputDialog("unesi broj redova"));
-		
-		brojStupaca = Integer.parseInt(JOptionPane.showInputDialog("unesi broj stupaca"));
-		
-		int [][] matrica = new int [brojRedova][brojStupaca];
-		
-		int a = 1, b1 = 0, b2 = brojStupaca-1, c1 = 0, c2 = brojRedova-1;
-		
-		while(a<=brojRedova*brojStupaca) {
-			
-			for(int i = b2; i >= b1; i--) {
-				matrica[c2][i] = a++;
+
+		int n = Integer.parseInt(
+				JOptionPane.showInputDialog("Unesite broj elemenata(matrica redova x polja)."));
+
+		int[][] ct = new int[n][n];
+
+		int k = 1, c1 = 0, c2 = n - 1, r1 = 0, r2 = n - 1;
+
+		while (k <= n * n) {
+
+			for (int i = c1; i <= c2; i++) {
+				ct[r1][i] = k++;
 			}
-			
-			for(int j = c2 - 1; j >= c1; j--) {
-				matrica[j][c1] = a++;
+
+			for (int j = r1 + 1; j <= r2; j++) {
+				ct[j][c2] = k++;
 			}
-			
-			for(int i = b1 + 1 ; i <= b2 ; i++) {
-				matrica[c1][i] = a++;
+
+			for (int i = c2 - 1; i >= c1; i--) {
+				ct[r2][i] = k++;
 			}
-			
-			for(int j = c1 + 1; j <= c2 - 1; j++) {
-				matrica[j][b2] = a++;
+
+			for (int j = r2 - 1; j >= r1 + 1; j--) {
+				ct[j][c1] = k++;
 			}
-			
-			b2--;
-			b1++;
-			c2--;
+
 			c1++;
+			c2--;
+			r1++;
+			r2--;
+
 		}
-			System.out.println("Ciklična matrica: \n");
-					
-					for(int i = 0; i < brojRedova; i++) {
-						for(int j = 0; j < brojStupaca; j++) {
-							System.out.print(matrica[i][j] + "\t");
-						}
-						System.out.println();
+		
+			System.out.println("Ciklièka tablica:");
+
+			for (int i = 0; i < n; i++) {
+				for (int j = 0; j < n; j++) {
+					System.out.print(ct[i][j] + "\t");
+				}
+				System.out.println();
+			}
 		}
+
 	}
-}
